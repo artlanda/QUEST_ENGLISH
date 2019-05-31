@@ -1,0 +1,76 @@
+.navigation {
+  &__barContainer {
+    background-color: var(--color-grey-dark-3);
+    display: flex;
+    //justify-content: space-between;
+  }
+
+  &__logoBox {
+    border: var(--line2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+  &__logo {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button--1 {
+    cursor: pointer;
+    border: var(--line2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 20%;
+  }
+
+  &__icon--1 {
+    color: inherit;
+    text-decoration: none;
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+
+  &__button--2 {
+    cursor: pointer;
+    border: var(--line2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 15%;
+  }
+
+  &__icon--2 {
+    position: relative; // !  ==1==
+    &,
+    &::before,
+    &::after {
+      display: block;
+      background: var(--color-grey-dark-1);
+      height: 0.5rem;
+      width: 3.8rem;
+      border-radius: 2px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute; // !  ==1==
+      //transition: all 0.3s;
+    }
+
+    &::before {
+      bottom: 1rem;
+    }
+
+    &::after {
+      top: 1rem;
+    }
+  }
+}
